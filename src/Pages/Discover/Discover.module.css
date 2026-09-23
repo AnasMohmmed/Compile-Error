@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.dropdowns {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    gap: 15px;
+}
+
+.add-btn {
+    background: var(--surface);
+    color: var(--text);
+    width: 200px;
+    height: 35px;
+    outline: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.1s;
+    border-radius: var(--radius-md);
+}
+
+.add-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.searchbtn {
+    display: flex;
+    gap: 20px;
+}

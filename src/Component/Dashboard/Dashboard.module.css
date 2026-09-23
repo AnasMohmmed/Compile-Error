@@ -1,0 +1,84 @@
+.container {
+    /* width: 80vw; */
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: var(--font-ui);
+    color: var(--text);
+}
+
+.DashCard {
+    width: 300px;
+    height: 150px;
+    box-shadow:var(--shadow-card) ;
+    background-color: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
+}
+
+.DashCard:hover {
+    scale: 1.1;
+    border: 1px solid var(--primary-hover);
+}
+
+.danger {
+    color: var(--danger);
+}
+
+.warning {
+    color: var(--warning);
+}
+
+.good {
+    color: var(--primary);
+
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.search-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.DashStatusCard {
+    margin-right: 15px;
+}
+
+.serch-btn:hover {
+    cursor: pointer;
+    color: var(--brand-error);
+    border-color: var(--border);
+
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
+.DashStatusCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3)
+}
+
+.slo-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slo-cards>*:last-child {
+    margin-bottom: 8px;
+}

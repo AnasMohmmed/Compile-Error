@@ -1,0 +1,117 @@
+.container {
+    padding: 24px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.loader {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.head-text h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.head-text p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.users-body {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr {
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+td {
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    color: var(--text-muted);
+}
+
+.invite-btn {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: #08110C;
+    border: none;
+    border-radius: 8px;
+    padding: 0 14px;
+    height: 34px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.invite-btn:hover {
+    background: var(--primary-hover);
+}
+
+.details-btn {
+    background-color: var(--surface-elevated);
+    color: var(--text-muted);
+    padding: 6px;
+    width: 60px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.details-btn:hover {
+    background-color: var(--info);
+    color: var(--text);
+}

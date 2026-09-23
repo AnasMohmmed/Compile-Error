@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    grid-template-columns: 25% 70%;
+    
+}
+.services{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.folder-head {
+    display: flex;
+    gap: 32px;
+}
+
+
+

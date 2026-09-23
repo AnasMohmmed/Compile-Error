@@ -1,0 +1,83 @@
+.container {
+    display: grid;
+    width: 320px;
+    height: 100px;
+    padding: 12px;
+    grid-template-columns: 15% 62% 23%;
+    align-items: center;
+    background-color: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.service-head {
+    display: flex;
+    gap: 32px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-btn {
+    display: flex;
+    gap: 8px;
+    outline: none;
+    padding: 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background-color: var(--primary);
+}
+
+.upload-btn:hover {
+    cursor: pointer;
+    background-color: #1ea76b;
+    color: var(--text);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-tranparent);
+    color: var(--primary);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.serv-name {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.serv-name span {
+    font-size: 14px;
+    background-color: var(--info-transparent);
+    color: var(--info);
+    padding: 4px;
+    border-radius: var(--radius-lg);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.details>*:last-child {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.details>*:first-child {
+    font-size: 14px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

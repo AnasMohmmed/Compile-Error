@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--surface-elevated);
+    width: 25%;
+    height: 500px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.log-input,
+.activate-btn,
+.log-btn {
+    width: 230px;
+    background-color: var(--surface);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    outline: none;
+    text-align: center;
+    height: 30px;
+    border: 1px solid var(--border);
+}
+
+.log-input:focus {
+    background-color: var(--surface);
+    border: 1px solid var(--info-transparent);
+}
+
+.logo-txt {
+    padding: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    background: linear-gradient(90deg, red, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+.data-error {
+    color: var(--brand-error);
+}
+
+.sign-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sign-head>span {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border);
+    margin: 20px 0;
+}
+
+.or {
+    position: relative;
+    left: 45%;
+    bottom: 13%;
+    width: fit-content;
+    background-color: var(--surface-elevated);
+}
+
+.signwith-otherservice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.signwith-otherservice>span {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.signwith-otherservice button {
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.signwith-otherservice .log-btn:hover {
+    background-color: var(--text-disabled-transparent);
+    border: 2px solid var(--border);
+    cursor: pointer;
+}
+
+.log-btn:hover {
+    background-color: var(--text-disabled-transparent);
+    cursor: pointer;
+
+}
+
+.password-txt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-txt a {
+    font-size: 13px;
+    color: var(--primary);
+}
+
+.info-text {
+    padding: 16px;
+    font-size: 12px;
+    background-color: rgba(54, 109, 220, 0.158);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--info);
+}
+
+.log-btn {
+    height: 40px;
+}
+
+.error-text {
+    color: var(--brand-error);
+    font-size: 13px;
+}

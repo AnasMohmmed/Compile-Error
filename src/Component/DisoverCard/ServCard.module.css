@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    background-color: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    width: 250px;
+    height: 120px;
+    font-weight: bold;
+}
+.card-head{
+    padding-top: var(--space-2);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+.card-body{
+    color: var(--text-muted);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.status-dot[data-status="healthy"] {
+    background: var(--primary);
+}
+
+.status-dot[data-status="degraded"] {
+    background: var(--warning);
+}
+
+.status-dot[data-status="down"] {
+    background: var(--brand-error);
+}
+.card-status{
+    display: flex;
+    gap: var(--space-2);
+}
+.percent {
+    border-radius: var(--radius-lg);
+    width: 100px;
+    height: 25px;
+    text-align: center;
+}
+
+.percent>span {
+    font-size: 13px;
+    font-family: var(--font-mono);
+    font-weight: bolder;
+}
+
+.tech {
+    color: var(--text-muted);
+    background-color: var(--text-disabled-transparent);
+    border-radius: var(--radius-lg);
+    width: 80px;
+    height: 25px;
+    text-align: center;
+}
+
+.tech>span {
+    font-size: 13px;
+    font-family: var(--font-mono);
+    font-weight: bolder;
+}

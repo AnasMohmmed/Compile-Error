@@ -1,0 +1,273 @@
+/* ===================================
+   DevHub / Compile Error — Design Tokens
+   Internal Developer Portal theme
+   =================================== */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Blaka&family=Jersey+10+Charted&family=Noto+Nastaliq+Urdu:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    /* Backgrounds */
+    --bg: #0B0E14;
+    --surface: #141821;
+    --surface-elevated: #1B212C;
+    --border: #262D3A;
+    --light-mode: #ebeef0;
+    --light: #a3ff9b86;
+    /* Brand */
+    --primary-tranparent: #3ddc974c;
+    --primary: #3DDC97;
+    /* success / main CTA */
+    --primary-hover: #2FC684;
+    --brand-error: #FF5D5D;
+    /* logo accent + real error states */
+    --brand-error-hover: #E64545;
+
+    /* Semantic */
+    --warning: #F5A623;
+    --info: #4EA1FF;
+    --info-transparent: #4ea1ff46;
+    --danger: #FF5D5D;
+    --success: #3DDC97;
+
+    /* Text */
+    --text: #E8ECF1;
+    --text-muted: #8B93A7;
+    --text-disabled: #4A5164;
+    --text-disabled-transparent: #4a516463;
+
+    /* Typography */
+    --font-ui: "Alexandria", sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    /* Radius & Spacing */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+
+    /* Shadows */
+    --shadow-card: 0 2px 8px rgba(114, 156, 212, 0.35);
+    --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Status pill helpers — for SLO Score / On Duty style badges */
+.status-good {
+    background: rgba(61, 220, 151, 0.15);
+    color: var(--primary);
+}
+
+.status-warning {
+    background: rgba(245, 166, 35, 0.15);
+    color: var(--warning);
+}
+
+.status-danger {
+    background: rgba(255, 93, 93, 0.15);
+    color: var(--danger);
+}
+
+.status-info {
+    background: rgba(78, 161, 255, 0.15);
+    color: var(--info);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-ui)
+}
+
+.dark-theme {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.light-theme {
+    /* Backgrounds */
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-elevated: #F1F5F9;
+    --border: #E2E8F0;
+
+    /* Text */
+    --text: #0F172A;
+    --text-muted: #64748B;
+    --text-disabled: #94A3B8;
+    --text-disabled-transparent: rgba(148, 163, 184, 0.4);
+
+    /* Shadows */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.notif-popup {
+    /* Change these colors to match your project */
+    --np-surface: var(--surface);
+    --np-bg: var(--bg);
+    --np-text: var(--info);
+    --np-muted: #667085;
+    --np-line: var(--border);
+    --np-accent: #2563eb;
+    --np-accent-soft: #eaf1ff;
+
+    /* Position: adjust top / right to sit under your icon */
+    position: fixed;
+    inset: 64px 24px auto auto;
+    margin: 0;
+
+    width: 340px;
+    max-width: calc(100vw - 24px);
+    padding: 0;
+    overflow: hidden;
+    background: var(--np-surface);
+    color: var(--np-text);
+    border: 1px solid var(--np-line);
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(16, 24, 40, .16);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+    /* Open / close animation */
+    opacity: 0;
+    transform: scale(.96) translateY(-6px);
+    transform-origin: top right;
+    transition:
+        opacity .15s ease,
+        transform .15s ease,
+        display .15s allow-discrete,
+        overlay .15s allow-discrete;
+}
+
+.notif-popup:popover-open {
+    opacity: 1;
+    transform: none;
+}
+
+@starting-style {
+    .notif-popup:popover-open {
+        opacity: 0;
+        transform: scale(.96) translateY(-6px);
+    }
+}
+
+.notif-popup *,
+.notif-popup *::before,
+.notif-popup *::after {
+    box-sizing: border-box;
+}
+
+/* ---------- Header ---------- */
+.notif-popup__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--np-line);
+}
+
+.notif-popup__head h2 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.notif-popup__link {
+    padding: 4px 6px;
+    border-radius: 6px;
+    color: var(--np-accent);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.notif-popup__link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- List ---------- */
+.notif-popup__list {
+    max-height: 340px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+}
+
+.notif-popup__item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--np-line);
+    color: inherit;
+    text-decoration: none;
+}
+
+.notif-popup__list li:last-child .notif-popup__item {
+    border-bottom: 0;
+}
+
+.notif-popup__item:hover {
+    background: var(--np-bg);
+}
+
+.notif-popup__item--unread {
+    background: var(--np-accent-soft);
+}
+
+.notif-popup__avatar {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--np-accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.notif-popup__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notif-popup__content p {
+    margin: 0 0 3px;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.notif-popup__content time {
+    font-size: 12px;
+    color: var(--np-muted);
+}
+
+.notif-popup__dot {
+    flex: none;
+    align-self: center;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--np-accent);
+    visibility: hidden;
+}
+
+.notif-popup__item--unread .notif-popup__dot {
+    visibility: visible;
+}
+
+/* ---------- Footer ---------- */
+.notif-popup__foot {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid var(--np-line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .notif-popup {
+        transition: none;
+    }
+}
